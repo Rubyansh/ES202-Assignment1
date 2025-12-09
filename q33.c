@@ -3,13 +3,17 @@
 #include <stdio.h>
 
 int main() {
-    int i;
-    long sum = 0;
+    int n = 100;
+    unsigned long long sum = 0;
     
-    for(i = 0; i < 100; i++) {
-        sum += 14 + i * 20;
+    // Loop from i = 1 to 100
+    for (int i = 1; i <= n; i++) {
+        unsigned long long base = (2 * i) - 1;
+        unsigned long long term = base * base * base * base;
+        sum += term;
     }
-    
-    printf("Sum of series = %ld\n", sum);
+
+    printf("The sum of the series for %d terms is: %llu\n", n, sum);
+
     return 0;
 }
