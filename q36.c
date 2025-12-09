@@ -1,14 +1,14 @@
-// wap to print the following pattern: grouped numbers 1 1 1 2 2 2 3 3 3
-
+//q36.c
 #include <stdio.h>
 
 int main() {
     int i, j;
-    
+    // 3x3 grid, rows are 1, 2, 3
     for(i = 1; i <= 3; i++) {
         for(j = 1; j <= 3; j++) {
-            printf("%d\n", i);
+            printf("%d\t", i);
         }
+        printf("\n");
     }
     return 0;
 }

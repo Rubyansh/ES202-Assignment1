@@ -1,15 +1,14 @@
-// wap to print the following pattern: 1, 1 2, 1 2 3
+//q41.c
 #include <stdio.h>
 
 int main() {
-    int rows = 3;
-    
-    for(int i = 1; i <= rows; i++) {
-        for(int j = 1; j <= i; j++) {
-            printf("%d ", j);
+    int i, j;
+    // Right triangle of numbers (row value)
+    for(i = 1; i <= 3; i++) {
+        for(j = 1; j <= i; j++) {
+            printf("%d\t", i);
         }
         printf("\n");
     }
-    
     return 0;
 }

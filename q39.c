@@ -1,13 +1,12 @@
-// wap to print the following pattern: increasing stars in rows
-
+//q39.c
 #include <stdio.h>
 
 int main() {
     int i, j;
-    
+    // Right triangle of asterisks
     for(i = 1; i <= 3; i++) {
         for(j = 1; j <= i; j++) {
-            printf("*");
+            printf("*\t");
         }
         printf("\n");
     }

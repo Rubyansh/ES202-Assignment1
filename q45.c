@@ -1,24 +1,23 @@
-// wap to print a number pyramid pattern
+//q45.c
 #include <stdio.h>
 
 int main() {
-    int n = 3;
-    
-    for(int i = 1; i <= n; i++) {
-        // Print spaces
-        for(int j = i; j < n; j++) {
-            printf("  ");
+    int i, j, s;
+    // Pyramid Palindrome: 1, 121, 12321...
+    for(i = 1; i <= 4; i++) {
+        // Print leading tab spaces
+        for(s = 1; s <= 4 - i; s++) {
+            printf("\t");
         }
         // Print increasing numbers
-        for(int j = 1; j <= i; j++) {
-            printf("%d ", j);
+        for(j = 1; j <= i; j++) {
+            printf("%d\t", j);
         }
         // Print decreasing numbers
-        for(int j = i-1; j >= 1; j--) {
-            printf("%d ", j);
+        for(j = i - 1; j >= 1; j--) {
+            printf("%d\t", j);
         }
         printf("\n");
     }
-    
     return 0;
 }

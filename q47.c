@@ -1,22 +1,19 @@
-// wap to print a binary pattern
+//q47.c
 #include <stdio.h>
 
 int main() {
-    int rows = 5, cols = 4;
-    int pattern[5][4] = {
-        {1, 1, 1, 1},
-        {0, 0, 1, 1},
-        {1, 1, 0, 1},
-        {0, 1, 0, 1},
-        {1, 0, 1, 0}
-    };
-    
-    for(int i = 0; i < rows; i++) {
-        for(int j = 0; j < cols; j++) {
-            printf("%d ", pattern[i][j]);
+    int i, j;
+    // Binary Triangle 1, 01, 101...
+    for(i = 1; i <= 5; i++) {
+        for(j = 1; j <= i; j++) {
+            // If sum of row and col index is even, print 1, else 0
+            if((i + j) % 2 == 0) {
+                printf("1\t");
+            } else {
+                printf("0\t");
+            }
         }
         printf("\n");
     }
-    
     return 0;
 }

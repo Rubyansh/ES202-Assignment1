@@ -1,15 +1,19 @@
-// wap to print the following pattern: rectangle of stars
+//q44.c
 #include <stdio.h>
 
 int main() {
-    int rows = 2, cols = 4;
-    
-    for(int i = 0; i < rows; i++) {
-        for(int j = 0; j < cols; j++) {
-            printf("* ");
+    int i, j, s;
+    // Pyramid of asterisks
+    for(i = 1; i <= 4; i++) {
+        // Print leading tab spaces
+        for(s = 1; s <= 4 - i; s++) {
+            printf("\t");
+        }
+        // Print asterisks
+        for(j = 1; j <= (2 * i - 1); j++) {
+            printf("*\t");
         }
         printf("\n");
     }
-    
     return 0;
 }

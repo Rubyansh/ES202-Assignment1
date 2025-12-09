@@ -1,12 +1,14 @@
-// wap to print the following pattern: vertical line of 9 stars
-
+//q34.c
 #include <stdio.h>
 
 int main() {
-    int i;
-    
-    for(i = 1; i <= 9; i++) {
-        printf("*\n");
+    int i, j;
+    // 3x3 grid of asterisks
+    for(i = 1; i <= 3; i++) {
+        for(j = 1; j <= 3; j++) {
+            printf("*\t");
+        }
+        printf("\n");
     }
     return 0;
 }
